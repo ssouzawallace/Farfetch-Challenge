@@ -12,5 +12,5 @@ import UIKit
 class GameDetailsViewController: UIViewController {
     @IBOutlet weak var coverImageView: UIImageView?
     @IBOutlet weak var nameLabel: UILabel?
-    @IBOutlet weak var viewsLabel: UILabel?
+    @IBOutlet weak var viewsLabel: UILabel?    
 }

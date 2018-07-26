@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Farfetch Challenge' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Farfetch Challenge
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'Unbox'
+
+end
+
+target 'Twitch Top 3' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Twitch Top 3
+
+end

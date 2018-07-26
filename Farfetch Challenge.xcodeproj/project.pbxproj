@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D9B7E96D312DD863A8481C6 /* Pods_Farfetch_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */; };
+		A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */; };
+		BAADEA5321094DA8008F37B7 /* GameFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */; };
+		BAADEA55210953FF008F37B7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA54210953FF008F37B7 /* GameViewModel.swift */; };
 		BAB70D2C2107C8340001A5DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D2B2107C8340001A5DB /* AppDelegate.swift */; };
-		BAB70D2E2107C8340001A5DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D2D2107C8340001A5DB /* ViewController.swift */; };
 		BAB70D312107C8340001A5DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB70D2F2107C8340001A5DB /* Main.storyboard */; };
 		BAB70D332107C8360001A5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB70D322107C8360001A5DB /* Assets.xcassets */; };
 		BAB70D362107C8360001A5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB70D342107C8360001A5DB /* LaunchScreen.storyboard */; };
@@ -18,6 +21,13 @@
 		BAB70D4E2107C9E90001A5DB /* Twitch Top 3.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BAB70D412107C9E80001A5DB /* Twitch Top 3.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BAB70D552107DFD60001A5DB /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D542107DFD60001A5DB /* GameModel.swift */; };
 		BAB70D592107E31E0001A5DB /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D582107E31E0001A5DB /* GameDetailsViewController.swift */; };
+		BAB70D5D2107E65C0001A5DB /* FavoriteGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D5C2107E65C0001A5DB /* FavoriteGamesViewController.swift */; };
+		BAB70D5F2107E6650001A5DB /* TopGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D5E2107E6650001A5DB /* TopGamesViewController.swift */; };
+		BAB70D642107ECD50001A5DB /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D632107ECD50001A5DB /* GameCollectionViewCell.swift */; };
+		BAB70D692107FD250001A5DB /* ColumnsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D682107FD250001A5DB /* ColumnsFlowLayout.swift */; };
+		BAB70D6C2107FEF80001A5DB /* TwitchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */; };
+		BAB70D712108050E0001A5DB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D702108050E0001A5DB /* GameListViewController.swift */; };
+		BAB70D75210807030001A5DB /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D74210807030001A5DB /* LocalData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +55,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch Top 3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch Top 3/Pods-Twitch Top 3.release.xcconfig"; sourceTree = "<group>"; };
+		2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitch_Top_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeedResult.swift; sourceTree = "<group>"; };
+		BAADEA54210953FF008F37B7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		BAB70D282107C8340001A5DB /* Farfetch Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Farfetch Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB70D2B2107C8340001A5DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAB70D2D2107C8340001A5DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAB70D302107C8340001A5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAB70D322107C8360001A5DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB70D352107C8360001A5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +74,15 @@
 		BAB70D4B2107C9E90001A5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAB70D542107DFD60001A5DB /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		BAB70D582107E31E0001A5DB /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
+		BAB70D5C2107E65C0001A5DB /* FavoriteGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesViewController.swift; sourceTree = "<group>"; };
+		BAB70D5E2107E6650001A5DB /* TopGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewController.swift; sourceTree = "<group>"; };
+		BAB70D632107ECD50001A5DB /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAB70D682107FD250001A5DB /* ColumnsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsFlowLayout.swift; sourceTree = "<group>"; };
+		BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchClient.swift; sourceTree = "<group>"; };
+		BAB70D702108050E0001A5DB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		BAB70D74210807030001A5DB /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch Top 3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch Top 3/Pods-Twitch Top 3.debug.xcconfig"; sourceTree = "<group>"; };
+		E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farfetch_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9B7E96D312DD863A8481C6 /* Pods_Farfetch_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,21 +99,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB70D442107C9E90001A5DB /* NotificationCenter.framework in Frameworks */,
+				A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40D58452D2A22E33378EBAC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */,
+				A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */,
+				BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */,
+				12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BAB70D1F2107C8340001A5DB = {
 			isa = PBXGroup;
 			children = (
-				BAB70D562107E3040001A5DB /* Modules */,
+				BAB70D73210806F60001A5DB /* LocalData */,
+				BAB70D6A2107FEE80001A5DB /* Network */,
 				BAB70D532107DFCE0001A5DB /* Model */,
+				BAB70D562107E3040001A5DB /* Modules */,
+				BAB70D602107ECBC0001A5DB /* UI Components */,
 				BAB70D2A2107C8340001A5DB /* Farfetch Challenge */,
 				BAB70D452107C9E90001A5DB /* Twitch Top 3 */,
 				BAB70D422107C9E90001A5DB /* Frameworks */,
 				BAB70D292107C8340001A5DB /* Products */,
+				40D58452D2A22E33378EBAC1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				BAB70D2B2107C8340001A5DB /* AppDelegate.swift */,
-				BAB70D2D2107C8340001A5DB /* ViewController.swift */,
 				BAB70D2F2107C8340001A5DB /* Main.storyboard */,
 				BAB70D322107C8360001A5DB /* Assets.xcassets */,
 				BAB70D342107C8360001A5DB /* LaunchScreen.storyboard */,
@@ -118,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				BAB70D432107C9E90001A5DB /* NotificationCenter.framework */,
+				E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */,
+				2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				BAB70D542107DFD60001A5DB /* GameModel.swift */,
+				BAADEA54210953FF008F37B7 /* GameViewModel.swift */,
+				BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +187,9 @@
 		BAB70D562107E3040001A5DB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BAB70D6F210804FD0001A5DB /* GameList */,
+				BAB70D5B2107E63A0001A5DB /* FavoriteGames */,
+				BAB70D5A2107E62C0001A5DB /* TopGames */,
 				BAB70D572107E3120001A5DB /* GameDetails */,
 			);
 			path = Modules;
@@ -156,6 +203,79 @@
 			path = GameDetails;
 			sourceTree = "<group>";
 		};
+		BAB70D5A2107E62C0001A5DB /* TopGames */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D5E2107E6650001A5DB /* TopGamesViewController.swift */,
+			);
+			path = TopGames;
+			sourceTree = "<group>";
+		};
+		BAB70D5B2107E63A0001A5DB /* FavoriteGames */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D5C2107E65C0001A5DB /* FavoriteGamesViewController.swift */,
+			);
+			path = FavoriteGames;
+			sourceTree = "<group>";
+		};
+		BAB70D602107ECBC0001A5DB /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D672107FD120001A5DB /* FlowLayout */,
+				BAB70D612107ECC40001A5DB /* Cells */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		BAB70D612107ECC40001A5DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D622107ECCA0001A5DB /* CollectionView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BAB70D622107ECCA0001A5DB /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D632107ECD50001A5DB /* GameCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		BAB70D672107FD120001A5DB /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D682107FD250001A5DB /* ColumnsFlowLayout.swift */,
+			);
+			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		BAB70D6A2107FEE80001A5DB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAB70D6F210804FD0001A5DB /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D702108050E0001A5DB /* GameListViewController.swift */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		BAB70D73210806F60001A5DB /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D74210807030001A5DB /* LocalData.swift */,
+			);
+			path = LocalData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,10 +283,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB70D3A2107C8360001A5DB /* Build configuration list for PBXNativeTarget "Farfetch Challenge" */;
 			buildPhases = (
+				1268BBDE2F7D01E93DFB5114 /* [CP] Check Pods Manifest.lock */,
 				BAB70D242107C8340001A5DB /* Sources */,
 				BAB70D252107C8340001A5DB /* Frameworks */,
 				BAB70D262107C8340001A5DB /* Resources */,
 				BAB70D522107C9E90001A5DB /* Embed App Extensions */,
+				8DE5C370BCCB88C93DCB5CF6 /* [CP] Embed Pods Frameworks */,
+				ADD0E73114567EF534A92992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB70D4F2107C9E90001A5DB /* Build configuration list for PBXNativeTarget "Twitch Top 3" */;
 			buildPhases = (
+				7BAA897B983A46080AA2D20C /* [CP] Check Pods Manifest.lock */,
 				BAB70D3D2107C9E80001A5DB /* Sources */,
 				BAB70D3E2107C9E80001A5DB /* Frameworks */,
 				BAB70D3F2107C9E80001A5DB /* Resources */,
+				7C6DBFDB2905A6F2515BC42D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,14 +378,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1268BBDE2F7D01E93DFB5114 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Farfetch Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BAA897B983A46080AA2D20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Twitch Top 3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C6DBFDB2905A6F2515BC42D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twitch Top 3/Pods-Twitch Top 3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DE5C370BCCB88C93DCB5CF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADD0E73114567EF534A92992 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAB70D242107C8340001A5DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAB70D2E2107C8340001A5DB /* ViewController.swift in Sources */,
+				BAADEA55210953FF008F37B7 /* GameViewModel.swift in Sources */,
+				BAB70D692107FD250001A5DB /* ColumnsFlowLayout.swift in Sources */,
+				BAB70D75210807030001A5DB /* LocalData.swift in Sources */,
+				BAB70D6C2107FEF80001A5DB /* TwitchClient.swift in Sources */,
+				BAB70D712108050E0001A5DB /* GameListViewController.swift in Sources */,
+				BAADEA5321094DA8008F37B7 /* GameFeedResult.swift in Sources */,
 				BAB70D592107E31E0001A5DB /* GameDetailsViewController.swift in Sources */,
+				BAB70D5F2107E6650001A5DB /* TopGamesViewController.swift in Sources */,
+				BAB70D642107ECD50001A5DB /* GameCollectionViewCell.swift in Sources */,
 				BAB70D2C2107C8340001A5DB /* AppDelegate.swift in Sources */,
+				BAB70D5D2107E65C0001A5DB /* FavoriteGamesViewController.swift in Sources */,
 				BAB70D552107DFD60001A5DB /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +651,7 @@
 		};
 		BAB70D3B2107C8360001A5DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -446,6 +671,7 @@
 		};
 		BAB70D3C2107C8360001A5DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -465,6 +691,7 @@
 		};
 		BAB70D502107C9E90001A5DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
@@ -484,6 +711,7 @@
 		};
 		BAB70D512107C9E90001A5DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
