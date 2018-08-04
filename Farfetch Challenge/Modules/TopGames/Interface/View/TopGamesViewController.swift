@@ -21,41 +21,57 @@ class TopGamesViewController: UIViewController {
         collectionView.register(GameCollectionViewCell.self)
         return collectionView
     }()
+    
     let activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         activityIndicator.hidesWhenStopped = true
         return activityIndicator
     }()
     
+    let noInternetEmptyStateView = EmptyStateView(title: "You don't have\nFavorite Games", actionTitle: "Tentar novamente")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Top Games"
         setupViews()
     
-        presenter?.viewDidLoad()
+        presenter?.start()
     }
     
     private func setupViews() {
         view.backgroundColor = UIColor.white
         view.addSubview(collectionView)
         view.addSubview(activityIndicator)
+        view.addSubview(noInternetEmptyStateView)
         constrainSubviews()
         collectionView.delegate = self
         collectionView.dataSource = self
+        noInternetEmptyStateView.delegate = self
     }
     
     private func constrainSubviews() {
-        constrain(collectionView, activityIndicator, view) { list, loader, container in
+        constrain(collectionView, activityIndicator, noInternetEmptyStateView, view) { list, loader, emptyState, container in
             list.edges == container.edges
+            emptyState.edges == container.edges
             loader.center == container.center
         }
+    }
+}
+
+extension TopGamesViewController: EmptyStateViewDelegate {
+    func emptyStateActionRequested() {
+        presenter?.start()
     }
 }
 
 extension TopGamesViewController: TopGamesViewInterface {
     
     func showNoInternetMessage() {
-        // TODO
+        noInternetEmptyStateView.isHidden = false
+    }
+    
+    func hideNoInternetMessage() {
+        noInternetEmptyStateView.isHidden = true
     }
     
     func showLoader() {

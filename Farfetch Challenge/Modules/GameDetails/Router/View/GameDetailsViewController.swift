@@ -20,6 +20,9 @@ class GameDetailsViewController: UIViewController {
     }()
     let nameLabel: UILabel = {
         let nameLabel = UILabel(frame: .zero)
+        nameLabel.textAlignment = .center
+        nameLabel.numberOfLines = 0
+        nameLabel.font = UIFont.systemFont(ofSize: 30)
         return nameLabel
     }()
     let favoriteBarButtonItem: UIBarButtonItem = {
@@ -77,7 +80,13 @@ extension GameDetailsViewController: GameDetailsViewInterface {
         
         let boxArtUrl = game.boxArtUrl(forImageType: .fullImage)
         coverImageView.sd_setImage(with: URL(string: boxArtUrl), placeholderImage: nil)
+     
         
-        favoriteBarButtonItem.title = game.isFavorite ? "★" : "☆"
+        let favoriteIconImage = game.isFavorite ? UIImage(named: "heart_barIcon_filled") : UIImage(named: "heart_barIcon_outline")
+        if game.isFavorite {
+            (favoriteBarButtonItem.value(forKey: "view") as? UIView)?.applyAnimation(.pump)
+        }
+        self.favoriteBarButtonItem.image = favoriteIconImage
+        
     }
 }

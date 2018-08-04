@@ -23,8 +23,8 @@ class ColumnsFlowLayout: UICollectionViewFlowLayout {
     }
     
     func setupLayout() {
-        minimumInteritemSpacing = 5
-        minimumLineSpacing = 5
+        minimumInteritemSpacing = 1
+        minimumLineSpacing = 1
         scrollDirection = .vertical
     }
     
@@ -34,7 +34,7 @@ class ColumnsFlowLayout: UICollectionViewFlowLayout {
         }
         get {
             let numberOfColumns = CGFloat(self.numberOfColumns)
-            let itemWidth = (self.collectionView!.frame.width - (numberOfColumns - 1)) / numberOfColumns - minimumLineSpacing/2
+            let itemWidth = (self.collectionView!.frame.width - (numberOfColumns - 1)) / numberOfColumns
             let itemHeight = itemWidth*4/3 + 40
             return CGSize(width: itemWidth, height: itemHeight)
         }

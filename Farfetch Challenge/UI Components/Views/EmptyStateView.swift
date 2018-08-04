@@ -10,18 +10,34 @@ import Foundation
 import UIKit
 import Cartography
 
+protocol EmptyStateViewDelegate: class {
+    func emptyStateActionRequested()
+}
+
 class EmptyStateView: UIView {
     
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let titleLabel = UILabel(frame: .zero)
         titleLabel.numberOfLines = 0
+        titleLabel.textColor = UIColor.gray
         return titleLabel
     }()
     
-    init(title: String) {
+    private let actionButton: UIButton = {
+        let actionButton = UIButton(type: .custom)
+        actionButton.setTitleColor(UIColor.purple, for: .normal)
+        return actionButton
+    }()
+    
+    weak var delegate: EmptyStateViewDelegate?
+    
+    init(title: String, actionTitle: String? = nil) {
         super.init(frame: .zero)
+        titleLabel.text = title        
+        actionButton.setTitle(actionTitle, for: .normal)
+        actionButton.addTarget(self, action: #selector(actionButtonTapped(_:)), for: .touchUpInside)
+        
         setupSubviews()
-        titleLabel.text = title
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,8 +46,15 @@ class EmptyStateView: UIView {
     
     private func setupSubviews() {
         addSubview(titleLabel)
-        constrain(titleLabel, self) { title, container in
+        addSubview(actionButton)
+        constrain(titleLabel, actionButton, self) { title, action, container in
             title.center == container.center
+            action.centerX == container.centerX
+            action.top == title.bottom + 20
         }
+    }
+    
+    @objc func actionButtonTapped(_ button: UIButton) {
+        delegate?.emptyStateActionRequested()
     }
 }

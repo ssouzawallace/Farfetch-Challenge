@@ -18,7 +18,9 @@ class GameCollectionViewCell: UICollectionViewCell {
         return UIImageView(frame: .zero)
     }()
     let favoriteButton: UIButton = {
-        return UIButton(type: .custom)
+        let favoriteButton = UIButton(type: .custom)
+        favoriteButton.tintColor = UIColor.white
+        return favoriteButton
     }()
     let titleLabel: UILabel = {
         let titleLabel = UILabel(frame: .zero)
@@ -67,13 +69,6 @@ class GameCollectionViewCell: UICollectionViewCell {
     
     var callback: FavoriteButtonTappedCallback? = nil
     
-    func setup(coverImageUrl: String, title: String, isFavorite: Bool, callback: FavoriteButtonTappedCallback? = nil) {
-        titleLabel.text = title
-        favoriteButton.setTitle(isFavorite ? "★": "☆", for: .normal)
-        coverImageView.sd_setImage(with: URL(string: coverImageUrl), placeholderImage: nil)
-        self.callback = callback
-    }
-    
     @objc func favoriteButtonTapped(_ button: UIButton) {
         callback?()
     }
@@ -82,7 +77,12 @@ class GameCollectionViewCell: UICollectionViewCell {
 extension GameCollectionViewCell: GameDisplayableView {
     func configureWith(game: GameViewModel) {
         titleLabel.text = game.name
-        favoriteButton.setTitle(game.isFavorite ? "★": "☆", for: .normal)
         coverImageView.sd_setImage(with: URL(string: game.boxArtUrl(forImageType: .thumbnail)), placeholderImage: nil)
+        
+        let favoriteIconImage = game.isFavorite ? UIImage(named: "heart_barIcon_filled")?.withRenderingMode(.alwaysTemplate) : UIImage(named: "heart_barIcon_outline")?.withRenderingMode(.alwaysTemplate)
+        if game.isFavorite {
+            favoriteButton.applyAnimation(.pump)
+        }
+        favoriteButton.setImage(favoriteIconImage, for: .normal)
     }
 }

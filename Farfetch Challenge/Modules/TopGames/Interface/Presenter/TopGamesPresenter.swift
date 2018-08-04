@@ -19,8 +19,9 @@ class TopGamesPresenter {
 
 extension TopGamesPresenter: TopGamesPresenterInterface {
     
-    func viewDidLoad() {
+    func start() {
         view?.showLoader()
+        view?.hideNoInternetMessage()
         askNewPageIfPossible()
     }
     
@@ -58,6 +59,7 @@ extension TopGamesPresenter: TopGamesInteractorOutput {
     func fetched(gamesList: [GameModel]) {
         favoriteGames = gamesList
         view?.hideLoader()
+        view?.hideNoInternetMessage()
         view?.reloadGames()
     }
     

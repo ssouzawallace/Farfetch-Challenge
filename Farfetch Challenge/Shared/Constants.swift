@@ -9,7 +9,7 @@
 import Foundation
 
 class Constants {
-    static let thumbnailImageHeight = 250
+    static let thumbnailImageHeight = 400
     static let thumbnailImageWidth = thumbnailImageHeight*3/4
     
     static let fullImageHeight = 800

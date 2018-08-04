@@ -14,6 +14,7 @@ protocol TopGamesViewInterface {
     var presenter: TopGamesPresenterInterface? { get set }
 
     func showNoInternetMessage()
+    func hideNoInternetMessage()
     func showLoader()
     func hideLoader()
     func reloadGames()

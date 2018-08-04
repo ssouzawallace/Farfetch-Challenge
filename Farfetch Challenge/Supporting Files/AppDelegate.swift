@@ -21,7 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = TopGamesTabBarController()
 
+        setupAppAppearance()
+        
         return true
+    }
+    
+    private func setupAppAppearance() {
+        UITabBar.appearance().barStyle = .black
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.black
+        UITabBar.appearance().isTranslucent = false
+        
+        UINavigationBar.appearance().barStyle = .black
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().isTranslucent = false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

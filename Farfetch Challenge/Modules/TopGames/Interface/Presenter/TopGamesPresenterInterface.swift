@@ -17,7 +17,7 @@ protocol TopGamesPresenterInterface {
     var interactor: TopGamesInteractorInput? { get set }
     var router: TopGamesRouterInterface? { get set }
     
-    func viewDidLoad()
+    func start()
     
     var numberOfGames: Int { get }
     
