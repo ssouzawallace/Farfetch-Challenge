@@ -9,6 +9,8 @@ target 'Farfetch Challenge' do
   pod 'SDWebImage', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
   pod 'Unbox'
+  pod 'ReSwift'
+  pod 'Cartography', '~> 3.0'
 
 end
 

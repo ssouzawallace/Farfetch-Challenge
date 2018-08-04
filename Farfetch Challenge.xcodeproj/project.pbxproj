@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		1D9B7E96D312DD863A8481C6 /* Pods_Farfetch_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */; };
 		A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */; };
+		BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
+		BA6D7AC5211012AF0037CFA8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC4211012AF0037CFA8 /* AppState.swift */; };
+		BA6D7AC7211019B90037CFA8 /* FavoriteGamesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */; };
+		BA6D7AC9211019E10037CFA8 /* FavoriteGamesStoreRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC8211019E10037CFA8 /* FavoriteGamesStoreRedux.swift */; };
+		BA6D7ACB21101A0B0037CFA8 /* FavoriteGamesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7ACA21101A0B0037CFA8 /* FavoriteGamesActions.swift */; };
+		BA6D7ACD21101A2B0037CFA8 /* FavoriteGamesReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7ACC21101A2B0037CFA8 /* FavoriteGamesReducers.swift */; };
+		BA6D7AD121101A5E0037CFA8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AD021101A5E0037CFA8 /* Store.swift */; };
+		BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */; };
+		BAA07DFD2110BA0900BF5977 /* GameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA07DFC2110BA0900BF5977 /* GameDetailsPresenter.swift */; };
+		BAA07DFF2110BDBC00BF5977 /* TopGamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA07DFE2110BDBC00BF5977 /* TopGamesInteractor.swift */; };
 		BAADEA5321094DA8008F37B7 /* GameFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */; };
 		BAADEA55210953FF008F37B7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA54210953FF008F37B7 /* GameViewModel.swift */; };
 		BAB70D2C2107C8340001A5DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D2B2107C8340001A5DB /* AppDelegate.swift */; };
@@ -26,8 +36,24 @@
 		BAB70D642107ECD50001A5DB /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D632107ECD50001A5DB /* GameCollectionViewCell.swift */; };
 		BAB70D692107FD250001A5DB /* ColumnsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D682107FD250001A5DB /* ColumnsFlowLayout.swift */; };
 		BAB70D6C2107FEF80001A5DB /* TwitchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */; };
-		BAB70D712108050E0001A5DB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D702108050E0001A5DB /* GameListViewController.swift */; };
-		BAB70D75210807030001A5DB /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D74210807030001A5DB /* LocalData.swift */; };
+		BABDEDF621126B8D0071E9F6 /* TopGamesViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDEDF521126B8D0071E9F6 /* TopGamesViewInterface.swift */; };
+		BABDEDF821126C160071E9F6 /* TopGamesInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDEDF721126C160071E9F6 /* TopGamesInteractorIO.swift */; };
+		BABDEDFC21126DF10071E9F6 /* TopGamesPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDEDFB21126DF10071E9F6 /* TopGamesPresenterInterface.swift */; };
+		BADCA0972112747600F37032 /* UICollectionView+Registering.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0962112747600F37032 /* UICollectionView+Registering.swift */; };
+		BADCA09A21128B4F00F37032 /* TopGamesTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA09921128B4F00F37032 /* TopGamesTabBar.swift */; };
+		BADCA09C2112907900F37032 /* FavoriteGamesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA09B2112907900F37032 /* FavoriteGamesRouter.swift */; };
+		BADCA0A22112950900F37032 /* FavoriteGamesInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0A12112950900F37032 /* FavoriteGamesInterface.swift */; };
+		BADCA0A42112951400F37032 /* FavoriteGamesPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0A32112951400F37032 /* FavoriteGamesPresenterInterface.swift */; };
+		BADCA0A6211368D200F37032 /* FavoriteGamesInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0A5211368D200F37032 /* FavoriteGamesInteractorIO.swift */; };
+		BADCA0A821136E1C00F37032 /* FavoriteGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0A721136E1C00F37032 /* FavoriteGamesPresenter.swift */; };
+		BADCA0AA21136EB800F37032 /* FavoriteGamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0A921136EB800F37032 /* FavoriteGamesInteractor.swift */; };
+		BADCA0AE21138DA200F37032 /* GameDetailsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0AD21138DA200F37032 /* GameDetailsInteractorIO.swift */; };
+		BADCA0B021138E6900F37032 /* GameDetailsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0AF21138E6900F37032 /* GameDetailsViewInterface.swift */; };
+		BADCA0B221138EC300F37032 /* GameDetailsPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0B121138EC300F37032 /* GameDetailsPresenterInterface.swift */; };
+		BADCA0B42114BFE600F37032 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCA0B32114BFE600F37032 /* LocalDataStore.swift */; };
+		BAF990FA2110DDF2001FF51D /* GameDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF990F92110DDF2001FF51D /* GameDetailsRouter.swift */; };
+		BAF991002110E76F001FF51D /* GameDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF990FF2110E76F001FF51D /* GameDetailsInteractor.swift */; };
+		BAF9910921110215001FF51D /* TopGamesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9910821110215001FF51D /* TopGamesRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +85,16 @@
 		2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitch_Top_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA6D7AC4211012AF0037CFA8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesStore.swift; sourceTree = "<group>"; };
+		BA6D7AC8211019E10037CFA8 /* FavoriteGamesStoreRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesStoreRedux.swift; sourceTree = "<group>"; };
+		BA6D7ACA21101A0B0037CFA8 /* FavoriteGamesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesActions.swift; sourceTree = "<group>"; };
+		BA6D7ACC21101A2B0037CFA8 /* FavoriteGamesReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesReducers.swift; sourceTree = "<group>"; };
+		BA6D7AD021101A5E0037CFA8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesPresenter.swift; sourceTree = "<group>"; };
+		BAA07DFC2110BA0900BF5977 /* GameDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenter.swift; sourceTree = "<group>"; };
+		BAA07DFE2110BDBC00BF5977 /* TopGamesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesInteractor.swift; sourceTree = "<group>"; };
 		BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeedResult.swift; sourceTree = "<group>"; };
 		BAADEA54210953FF008F37B7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		BAB70D282107C8340001A5DB /* Farfetch Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Farfetch Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +115,24 @@
 		BAB70D632107ECD50001A5DB /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAB70D682107FD250001A5DB /* ColumnsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsFlowLayout.swift; sourceTree = "<group>"; };
 		BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchClient.swift; sourceTree = "<group>"; };
-		BAB70D702108050E0001A5DB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
-		BAB70D74210807030001A5DB /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		BABDEDF521126B8D0071E9F6 /* TopGamesViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesViewInterface.swift; sourceTree = "<group>"; };
+		BABDEDF721126C160071E9F6 /* TopGamesInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesInteractorIO.swift; sourceTree = "<group>"; };
+		BABDEDFB21126DF10071E9F6 /* TopGamesPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesPresenterInterface.swift; sourceTree = "<group>"; };
+		BADCA0962112747600F37032 /* UICollectionView+Registering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Registering.swift"; sourceTree = "<group>"; };
+		BADCA09921128B4F00F37032 /* TopGamesTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesTabBar.swift; sourceTree = "<group>"; };
+		BADCA09B2112907900F37032 /* FavoriteGamesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesRouter.swift; sourceTree = "<group>"; };
+		BADCA0A12112950900F37032 /* FavoriteGamesInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesInterface.swift; sourceTree = "<group>"; };
+		BADCA0A32112951400F37032 /* FavoriteGamesPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesPresenterInterface.swift; sourceTree = "<group>"; };
+		BADCA0A5211368D200F37032 /* FavoriteGamesInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesInteractorIO.swift; sourceTree = "<group>"; };
+		BADCA0A721136E1C00F37032 /* FavoriteGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesPresenter.swift; sourceTree = "<group>"; };
+		BADCA0A921136EB800F37032 /* FavoriteGamesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesInteractor.swift; sourceTree = "<group>"; };
+		BADCA0AD21138DA200F37032 /* GameDetailsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractorIO.swift; sourceTree = "<group>"; };
+		BADCA0AF21138E6900F37032 /* GameDetailsViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewInterface.swift; sourceTree = "<group>"; };
+		BADCA0B121138EC300F37032 /* GameDetailsPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenterInterface.swift; sourceTree = "<group>"; };
+		BADCA0B32114BFE600F37032 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
+		BAF990F92110DDF2001FF51D /* GameDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsRouter.swift; sourceTree = "<group>"; };
+		BAF990FF2110E76F001FF51D /* GameDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractor.swift; sourceTree = "<group>"; };
+		BAF9910821110215001FF51D /* TopGamesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesRouter.swift; sourceTree = "<group>"; };
 		BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch Top 3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch Top 3/Pods-Twitch Top 3.debug.xcconfig"; sourceTree = "<group>"; };
 		E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farfetch_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,14 +169,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA6D7AC0210FC6380037CFA8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA0952112746300F37032 /* Extensions */,
+				BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BA6D7AC3211012A60037CFA8 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				BA6D7ACF21101A450037CFA8 /* Actions */,
+				BA6D7ACE21101A380037CFA8 /* Reducers */,
+				BA6D7AC4211012AF0037CFA8 /* AppState.swift */,
+				BA6D7AD021101A5E0037CFA8 /* Store.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		BA6D7ACE21101A380037CFA8 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				BA6D7ACC21101A2B0037CFA8 /* FavoriteGamesReducers.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		BA6D7ACF21101A450037CFA8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				BA6D7ACA21101A0B0037CFA8 /* FavoriteGamesActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		BAB70D1F2107C8340001A5DB = {
 			isa = PBXGroup;
 			children = (
-				BAB70D73210806F60001A5DB /* LocalData */,
-				BAB70D6A2107FEE80001A5DB /* Network */,
-				BAB70D532107DFCE0001A5DB /* Model */,
-				BAB70D562107E3040001A5DB /* Modules */,
-				BAB70D602107ECBC0001A5DB /* UI Components */,
 				BAB70D2A2107C8340001A5DB /* Farfetch Challenge */,
 				BAB70D452107C9E90001A5DB /* Twitch Top 3 */,
 				BAB70D422107C9E90001A5DB /* Frameworks */,
@@ -145,6 +228,12 @@
 		BAB70D2A2107C8340001A5DB /* Farfetch Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				BAB70D532107DFCE0001A5DB /* Model */,
+				BAB70D6A2107FEE80001A5DB /* Network */,
+				BA6D7AC0210FC6380037CFA8 /* Shared */,
+				BAB70D73210806F60001A5DB /* LocalData */,
+				BAB70D562107E3040001A5DB /* Modules */,
+				BAB70D602107ECBC0001A5DB /* UI Components */,
 				BAB70D2B2107C8340001A5DB /* AppDelegate.swift */,
 				BAB70D2F2107C8340001A5DB /* Main.storyboard */,
 				BAB70D322107C8360001A5DB /* Assets.xcassets */,
@@ -187,7 +276,7 @@
 		BAB70D562107E3040001A5DB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BAB70D6F210804FD0001A5DB /* GameList */,
+				BADCA09821128B3D00F37032 /* TopGamesTabBar */,
 				BAB70D5B2107E63A0001A5DB /* FavoriteGames */,
 				BAB70D5A2107E62C0001A5DB /* TopGames */,
 				BAB70D572107E3120001A5DB /* GameDetails */,
@@ -198,7 +287,9 @@
 		BAB70D572107E3120001A5DB /* GameDetails */ = {
 			isa = PBXGroup;
 			children = (
-				BAB70D582107E31E0001A5DB /* GameDetailsViewController.swift */,
+				BAF990F92110DDF2001FF51D /* GameDetailsRouter.swift */,
+				BAF990FE2110E751001FF51D /* Interface */,
+				BAF991012110E788001FF51D /* Business */,
 			);
 			path = GameDetails;
 			sourceTree = "<group>";
@@ -206,7 +297,9 @@
 		BAB70D5A2107E62C0001A5DB /* TopGames */ = {
 			isa = PBXGroup;
 			children = (
-				BAB70D5E2107E6650001A5DB /* TopGamesViewController.swift */,
+				BAF9910821110215001FF51D /* TopGamesRouter.swift */,
+				BABDEDF421126B670071E9F6 /* Interface */,
+				BABDEDF221126B590071E9F6 /* Business */,
 			);
 			path = TopGames;
 			sourceTree = "<group>";
@@ -214,7 +307,9 @@
 		BAB70D5B2107E63A0001A5DB /* FavoriteGames */ = {
 			isa = PBXGroup;
 			children = (
-				BAB70D5C2107E65C0001A5DB /* FavoriteGamesViewController.swift */,
+				BADCA09B2112907900F37032 /* FavoriteGamesRouter.swift */,
+				BADCA09E211294DB00F37032 /* Interface */,
+				BADCA09D211294D000F37032 /* Business */,
 			);
 			path = FavoriteGames;
 			sourceTree = "<group>";
@@ -260,20 +355,140 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BAB70D6F210804FD0001A5DB /* GameList */ = {
-			isa = PBXGroup;
-			children = (
-				BAB70D702108050E0001A5DB /* GameListViewController.swift */,
-			);
-			path = GameList;
-			sourceTree = "<group>";
-		};
 		BAB70D73210806F60001A5DB /* LocalData */ = {
 			isa = PBXGroup;
 			children = (
-				BAB70D74210807030001A5DB /* LocalData.swift */,
+				BA6D7AC3211012A60037CFA8 /* Redux */,
+				BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */,
+				BADCA0B32114BFE600F37032 /* LocalDataStore.swift */,
+				BA6D7AC8211019E10037CFA8 /* FavoriteGamesStoreRedux.swift */,
 			);
 			path = LocalData;
+			sourceTree = "<group>";
+		};
+		BABDEDF221126B590071E9F6 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				BAA07DFE2110BDBC00BF5977 /* TopGamesInteractor.swift */,
+				BABDEDF721126C160071E9F6 /* TopGamesInteractorIO.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		BABDEDF421126B670071E9F6 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BABDEDFE21126EE20071E9F6 /* View */,
+				BABDEDFD21126EDB0071E9F6 /* Presenter */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		BABDEDFD21126EDB0071E9F6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */,
+				BABDEDFB21126DF10071E9F6 /* TopGamesPresenterInterface.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BABDEDFE21126EE20071E9F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D5E2107E6650001A5DB /* TopGamesViewController.swift */,
+				BABDEDF521126B8D0071E9F6 /* TopGamesViewInterface.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BADCA0952112746300F37032 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA0962112747600F37032 /* UICollectionView+Registering.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BADCA09821128B3D00F37032 /* TopGamesTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA09921128B4F00F37032 /* TopGamesTabBar.swift */,
+			);
+			path = TopGamesTabBar;
+			sourceTree = "<group>";
+		};
+		BADCA09D211294D000F37032 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA0A5211368D200F37032 /* FavoriteGamesInteractorIO.swift */,
+				BADCA0A921136EB800F37032 /* FavoriteGamesInteractor.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		BADCA09E211294DB00F37032 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA0A0211294E400F37032 /* View */,
+				BADCA09F211294E000F37032 /* Presenter */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		BADCA09F211294E000F37032 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BADCA0A32112951400F37032 /* FavoriteGamesPresenterInterface.swift */,
+				BADCA0A721136E1C00F37032 /* FavoriteGamesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BADCA0A0211294E400F37032 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D5C2107E65C0001A5DB /* FavoriteGamesViewController.swift */,
+				BADCA0A12112950900F37032 /* FavoriteGamesInterface.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAF990FB2110E739001FF51D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAB70D582107E31E0001A5DB /* GameDetailsViewController.swift */,
+				BADCA0AF21138E6900F37032 /* GameDetailsViewInterface.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAF990FD2110E74B001FF51D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BAA07DFC2110BA0900BF5977 /* GameDetailsPresenter.swift */,
+				BADCA0B121138EC300F37032 /* GameDetailsPresenterInterface.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BAF990FE2110E751001FF51D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BAF990FD2110E74B001FF51D /* Presenter */,
+				BAF990FB2110E739001FF51D /* View */,
+			);
+			name = Interface;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BAF991012110E788001FF51D /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				BAF990FF2110E76F001FF51D /* GameDetailsInteractor.swift */,
+				BADCA0AD21138DA200F37032 /* GameDetailsInteractorIO.swift */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,12 +653,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
@@ -474,17 +693,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADCA0AA21136EB800F37032 /* FavoriteGamesInteractor.swift in Sources */,
 				BAADEA55210953FF008F37B7 /* GameViewModel.swift in Sources */,
+				BAF991002110E76F001FF51D /* GameDetailsInteractor.swift in Sources */,
+				BADCA0B42114BFE600F37032 /* LocalDataStore.swift in Sources */,
 				BAB70D692107FD250001A5DB /* ColumnsFlowLayout.swift in Sources */,
-				BAB70D75210807030001A5DB /* LocalData.swift in Sources */,
+				BAF9910921110215001FF51D /* TopGamesRouter.swift in Sources */,
+				BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */,
+				BA6D7AC5211012AF0037CFA8 /* AppState.swift in Sources */,
+				BABDEDF821126C160071E9F6 /* TopGamesInteractorIO.swift in Sources */,
+				BABDEDF621126B8D0071E9F6 /* TopGamesViewInterface.swift in Sources */,
+				BAA07DFF2110BDBC00BF5977 /* TopGamesInteractor.swift in Sources */,
 				BAB70D6C2107FEF80001A5DB /* TwitchClient.swift in Sources */,
-				BAB70D712108050E0001A5DB /* GameListViewController.swift in Sources */,
+				BAF990FA2110DDF2001FF51D /* GameDetailsRouter.swift in Sources */,
+				BADCA0A821136E1C00F37032 /* FavoriteGamesPresenter.swift in Sources */,
+				BADCA0972112747600F37032 /* UICollectionView+Registering.swift in Sources */,
+				BA6D7ACD21101A2B0037CFA8 /* FavoriteGamesReducers.swift in Sources */,
 				BAADEA5321094DA8008F37B7 /* GameFeedResult.swift in Sources */,
+				BADCA0AE21138DA200F37032 /* GameDetailsInteractorIO.swift in Sources */,
 				BAB70D592107E31E0001A5DB /* GameDetailsViewController.swift in Sources */,
+				BADCA0B221138EC300F37032 /* GameDetailsPresenterInterface.swift in Sources */,
+				BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */,
+				BA6D7ACB21101A0B0037CFA8 /* FavoriteGamesActions.swift in Sources */,
 				BAB70D5F2107E6650001A5DB /* TopGamesViewController.swift in Sources */,
+				BA6D7AC9211019E10037CFA8 /* FavoriteGamesStoreRedux.swift in Sources */,
 				BAB70D642107ECD50001A5DB /* GameCollectionViewCell.swift in Sources */,
+				BADCA0A22112950900F37032 /* FavoriteGamesInterface.swift in Sources */,
+				BA6D7AD121101A5E0037CFA8 /* Store.swift in Sources */,
+				BA6D7AC7211019B90037CFA8 /* FavoriteGamesStore.swift in Sources */,
 				BAB70D2C2107C8340001A5DB /* AppDelegate.swift in Sources */,
+				BADCA0A42112951400F37032 /* FavoriteGamesPresenterInterface.swift in Sources */,
+				BADCA09A21128B4F00F37032 /* TopGamesTabBar.swift in Sources */,
+				BAA07DFD2110BA0900BF5977 /* GameDetailsPresenter.swift in Sources */,
+				BADCA09C2112907900F37032 /* FavoriteGamesRouter.swift in Sources */,
+				BADCA0B021138E6900F37032 /* GameDetailsViewInterface.swift in Sources */,
+				BABDEDFC21126DF10071E9F6 /* TopGamesPresenterInterface.swift in Sources */,
 				BAB70D5D2107E65C0001A5DB /* FavoriteGamesViewController.swift in Sources */,
+				BADCA0A6211368D200F37032 /* FavoriteGamesInteractorIO.swift in Sources */,
 				BAB70D552107DFD60001A5DB /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
