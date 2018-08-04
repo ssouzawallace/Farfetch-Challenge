@@ -276,6 +276,7 @@
 		BAB70D562107E3040001A5DB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BADCA0B52116176400F37032 /* GameList */,
 				BADCA09821128B3D00F37032 /* TopGamesTabBar */,
 				BAB70D5B2107E63A0001A5DB /* FavoriteGames */,
 				BAB70D5A2107E62C0001A5DB /* TopGames */,
@@ -452,6 +453,13 @@
 				BADCA0A12112950900F37032 /* FavoriteGamesInterface.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BADCA0B52116176400F37032 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameList;
 			sourceTree = "<group>";
 		};
 		BAF990FB2110E739001FF51D /* View */ = {
@@ -901,13 +909,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "Farfetch Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -921,13 +929,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "Farfetch Challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -939,14 +947,14 @@
 			baseConfigurationReference = BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "Twitch Top 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-Challenge.Twitch-Top-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -959,14 +967,14 @@
 			baseConfigurationReference = 12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "Twitch Top 3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-Challenge.Twitch-Top-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;

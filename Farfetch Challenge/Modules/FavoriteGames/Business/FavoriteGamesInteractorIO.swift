@@ -12,6 +12,7 @@ protocol FavoriteGamesInteractorInput {
     var presenter: FavoriteGamesInteractorOutput? { get set }
     
     func fetchFavorites()
+    func toggleFavorite(forGame game: GameModel)
 }
 
 protocol FavoriteGamesInteractorOutput {

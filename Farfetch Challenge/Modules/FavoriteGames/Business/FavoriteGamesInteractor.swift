@@ -24,6 +24,14 @@ extension FavoriteGamesInteractor: FavoriteGamesInteractorInput {
     func fetchFavorites() {
         presenter?.favoriteGamesChanged(LocalDataStore.shared.getFavoriteGames())
     }
+    
+    func toggleFavorite(forGame game: GameModel) {
+        if LocalDataStore.shared.isFavorite(game: game) {
+            LocalDataStore.shared.removeFavorite(game: game)
+        } else {
+            LocalDataStore.shared.addFavorite(game: game)
+        }
+    }
 }
 
 extension FavoriteGamesInteractor: FavoriteGamesStoreSubscriber {

@@ -11,7 +11,7 @@ import Foundation
 class FavoriteGamesPresenter {
     var view: FavoriteGamesViewInterface?
     var interactor: FavoriteGamesInteractorInput?
-    var wireFrame: FavoriteGamesRouterInterface?
+    var router: FavoriteGamesRouterInterface?
     
     var favoriteGames: [GameModel] = []
 }
@@ -31,7 +31,11 @@ extension FavoriteGamesPresenter: FavoriteGamesPresenterInterface {
     }
     
     func favoriteButtonTapped(at index: Int) {
-        
+        interactor?.toggleFavorite(forGame: favoriteGames[index])
+    }
+    
+    func didSelectGame(at index: Int) {
+        router?.showDetails(ofGame: favoriteGames[index])
     }
 }
 

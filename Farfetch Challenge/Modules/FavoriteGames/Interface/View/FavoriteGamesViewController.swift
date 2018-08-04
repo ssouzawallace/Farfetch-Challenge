@@ -79,7 +79,7 @@ extension FavoriteGamesViewController: UICollectionViewDataSource {
 
 extension FavoriteGamesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO
+        presenter?.didSelectGame(at: indexPath.row)
     }    
 }
 

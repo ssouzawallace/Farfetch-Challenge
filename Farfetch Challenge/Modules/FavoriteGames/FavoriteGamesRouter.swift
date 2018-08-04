@@ -9,24 +9,40 @@
 import Foundation
 import UIKit
 
-class FavoriteGamesRouterInterface {
+protocol FavoriteGamesRouterInterface {
+    func showDetails(ofGame game: GameModel)
 }
 
-class FavoriteGamesRouter: FavoriteGamesRouterInterface {
+class FavoriteGamesRouter {
+    
+    let view: UIViewController
+    
+    init(view: UIViewController) {
+        self.view = view
+    }
+    
     class func createModule() -> UIViewController {
         // Generating module components
         var view: FavoriteGamesViewInterface = FavoriteGamesViewController()
         var presenter: FavoriteGamesPresenterInterface & FavoriteGamesInteractorOutput = FavoriteGamesPresenter()
         var interactor: FavoriteGamesInteractorInput = FavoriteGamesInteractor()
-        let wireFrame: FavoriteGamesRouterInterface = FavoriteGamesRouter()
+        let router: FavoriteGamesRouterInterface = FavoriteGamesRouter(view: view as! UIViewController)
         
         // Connecting
         view.presenter = presenter
         presenter.view = view
-        presenter.wireFrame = wireFrame
+        presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
         
         return view as! UIViewController
+    }
+}
+
+extension FavoriteGamesRouter: FavoriteGamesRouterInterface {
+    func showDetails(ofGame game: GameModel) {
+        let detailsViewController = GameDetailsRouter.createModule(withGame: game)
+        detailsViewController.hidesBottomBarWhenPushed = true
+        view.navigationController?.show(detailsViewController, sender: self)
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 protocol FavoriteGamesPresenterInterface {
     var view: FavoriteGamesViewInterface? { get set }
     var interactor: FavoriteGamesInteractorInput? { get set }
-    var wireFrame: FavoriteGamesRouterInterface? { get set }
+    var router: FavoriteGamesRouterInterface? { get set }
     
     func viewDidLoad()
     
@@ -19,4 +19,5 @@ protocol FavoriteGamesPresenterInterface {
     
     func configure(view: GameDisplayableView, at index: Int)
     func favoriteButtonTapped(at index: Int)
+    func didSelectGame(at index: Int)
 }
