@@ -22,6 +22,8 @@ class FavoriteGamesViewController: UIViewController {
         return collectionView
     }()
     
+    let emptyStateView = EmptyStateView(title: "You don't have\nFavorite Games")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Favorites"
@@ -32,18 +34,28 @@ class FavoriteGamesViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = UIColor.white
         view.addSubview(collectionView)
+        view.addSubview(emptyStateView)
         constrainSubviews()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     private func constrainSubviews() {
-        constrain(collectionView, view) { list, container in
+        constrain(collectionView, emptyStateView, view) { list, emptyState, container in
             list.edges == container.edges
+            emptyState.edges == container.edges
         }
     }
 }
 
 extension FavoriteGamesViewController: FavoriteGamesViewInterface {
+    
+    func showEmptyState() {
+        emptyStateView.isHidden = false
+    }
+    
+    func hideEmptyState() {
+        emptyStateView.isHidden = true
+    }
     
     func reloadGames() {
         collectionView.reloadData()

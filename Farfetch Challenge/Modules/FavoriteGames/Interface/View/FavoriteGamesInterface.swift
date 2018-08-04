@@ -12,6 +12,9 @@ protocol FavoriteGamesViewInterface {
     
     var presenter: FavoriteGamesPresenterInterface? { get set }
     
+    func showEmptyState()
+    func hideEmptyState()
+    
     func updateIndices(toInsertIndexes: [Int], toDeleteIndexes: [Int])
     func reloadGames()
 }

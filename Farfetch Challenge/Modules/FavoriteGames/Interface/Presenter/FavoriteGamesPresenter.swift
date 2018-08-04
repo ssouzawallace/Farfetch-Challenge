@@ -42,6 +42,11 @@ extension FavoriteGamesPresenter: FavoriteGamesPresenterInterface {
 extension FavoriteGamesPresenter: FavoriteGamesInteractorOutput {
     func favoriteGamesChanged(_ games: [GameModel]) {
         favoriteGames = games
+        if favoriteGames.count == 0 {
+            view?.showEmptyState()
+        } else {
+            view?.hideEmptyState()
+        }
         view?.reloadGames()
 //        var currentListIndex = 0
 //        var newListIndex = 0

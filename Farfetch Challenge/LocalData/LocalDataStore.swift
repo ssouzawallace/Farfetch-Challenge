@@ -35,7 +35,7 @@ class LocalDataStore {
             let game = favoriteGames[index]
             removePictures(ofGame: game)
             favoriteGames.remove(at: index)
-            
+            storeFavoriteGames(favoriteGames)
             broadcastFavoriteGamesChanged()
         }
     }
