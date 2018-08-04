@@ -11,6 +11,10 @@
 		A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */; };
 		BA00557021162B19003B381B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00556F21162B19003B381B /* UIView+Animations.swift */; };
 		BA00557221164A7D003B381B /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00557121164A7D003B381B /* UIColor+Theme.swift */; };
+		BA00557321165C1D003B381B /* TwitchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D6B2107FEF80001A5DB /* TwitchClient.swift */; };
+		BA00557421165D87003B381B /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D542107DFD60001A5DB /* GameModel.swift */; };
+		BA00557621165D87003B381B /* GameFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */; };
+		BA00557721165D95003B381B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
 		BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
 		BA6D7AC7211019B90037CFA8 /* FavoriteGamesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */; };
 		BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */; };
@@ -189,6 +193,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA00557821165FA7003B381B /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		BA6D7AC0210FC6380037CFA8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +257,7 @@
 		BAB70D452107C9E90001A5DB /* Twitch Top 3 */ = {
 			isa = PBXGroup;
 			children = (
+				BA00557821165FA7003B381B /* UIComponents */,
 				BA00556E21162378003B381B /* Supporting Files */,
 				BAB70D462107C9E90001A5DB /* TodayViewController.swift */,
 				BAB70D482107C9E90001A5DB /* MainInterface.storyboard */,
@@ -731,6 +743,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB70D472107C9E90001A5DB /* TodayViewController.swift in Sources */,
+				BA00557621165D87003B381B /* GameFeedResult.swift in Sources */,
+				BA00557321165C1D003B381B /* TwitchClient.swift in Sources */,
+				BA00557421165D87003B381B /* GameModel.swift in Sources */,
+				BA00557721165D95003B381B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,7 +903,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Farfetch Challenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -904,7 +923,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Farfetch Challenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -919,7 +941,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Twitch Top 3/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -935,7 +961,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Twitch Top 3/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

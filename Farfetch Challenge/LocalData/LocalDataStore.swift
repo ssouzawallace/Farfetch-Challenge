@@ -30,6 +30,7 @@ class LocalDataStore {
         storeFavoriteGames(favoriteGames)
         broadcastFavoriteGamesChanged()
     }
+    
     func removeFavorite(game: GameModel) {
         if let index = favoriteGames.index(of: game) {
             let game = favoriteGames[index]

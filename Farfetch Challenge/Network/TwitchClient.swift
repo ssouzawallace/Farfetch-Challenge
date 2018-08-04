@@ -35,13 +35,17 @@ class TwitchClient {
         "Accept-Language": Bundle.main.preferredLocalizations.first ?? "en"
     ]
     
-    func fetchPage(after cursor: String?, completion: @escaping (Result<GameFeedResult, APIError>) -> Void) {
+    func fetchPage(after cursor: String?, withLimit limit: Int?, completion: @escaping (Result<GameFeedResult, APIError>) -> Void) {
         let url = baseUrl + "games/top"
         var parameters: Parameters = [:]
         
         if let cursor = cursor {
             parameters["after"] = cursor
         }
+        if let limit = limit {
+            parameters["first"] = limit
+        }
+        
         Alamofire.request(url, parameters: parameters, headers: headers).responseData { response in
             if let jsonData = response.result.value {
                 do {
@@ -54,5 +58,9 @@ class TwitchClient {
                 completion(.failure(.notConnected))
             }
         }
+    }
+    
+    func fetchPage(after cursor: String?, completion: @escaping (Result<GameFeedResult, APIError>) -> Void) {
+        fetchPage(after: cursor, withLimit: nil, completion: completion)
     }    
 }
