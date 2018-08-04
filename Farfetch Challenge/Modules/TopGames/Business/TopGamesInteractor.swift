@@ -48,8 +48,10 @@ extension TopGamesInteractor: TopGamesInteractorInput {
                 
                 break
             case .failure(let error):
+                if error == .notConnected {
+                    self?.presenter?.noInternet()
+                }
                 print(error)
-                // TODO: handle error
                 break
             }
         }
@@ -66,6 +68,8 @@ extension TopGamesInteractor: TopGamesInteractorInput {
 
 extension TopGamesInteractor: FavoriteGamesStoreSubscriber {
     func favoriteGamesChanged() {
-        presenter?.fetched(gamesList: games)
+        if games.count > 0 {
+            presenter?.fetched(gamesList: games)
+        }        
     }
 }

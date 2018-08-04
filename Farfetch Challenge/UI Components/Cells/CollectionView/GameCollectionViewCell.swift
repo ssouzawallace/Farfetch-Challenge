@@ -80,9 +80,6 @@ extension GameCollectionViewCell: GameDisplayableView {
         coverImageView.sd_setImage(with: URL(string: game.boxArtUrl(forImageType: .thumbnail)), placeholderImage: nil)
         
         let favoriteIconImage = game.isFavorite ? UIImage(named: "heart_barIcon_filled")?.withRenderingMode(.alwaysTemplate) : UIImage(named: "heart_barIcon_outline")?.withRenderingMode(.alwaysTemplate)
-        if game.isFavorite {
-            favoriteButton.applyAnimation(.pump)
-        }
-        favoriteButton.setImage(favoriteIconImage, for: .normal)
+        self.favoriteButton.setImage(favoriteIconImage, for: .normal)
     }
 }

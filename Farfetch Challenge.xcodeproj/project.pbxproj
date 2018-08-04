@@ -10,6 +10,7 @@
 		1D9B7E96D312DD863A8481C6 /* Pods_Farfetch_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */; };
 		A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */; };
 		BA00557021162B19003B381B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00556F21162B19003B381B /* UIView+Animations.swift */; };
+		BA00557221164A7D003B381B /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00557121164A7D003B381B /* UIColor+Theme.swift */; };
 		BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
 		BA6D7AC7211019B90037CFA8 /* FavoriteGamesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */; };
 		BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */; };
@@ -82,6 +83,7 @@
 		9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		BA00556F21162B19003B381B /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		BA00557121164A7D003B381B /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesStore.swift; sourceTree = "<group>"; };
 		BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesPresenter.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			children = (
 				BADCA0962112747600F37032 /* UICollectionView+Registering.swift */,
 				BA00556F21162B19003B381B /* UIView+Animations.swift */,
+				BA00557121164A7D003B381B /* UIColor+Theme.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				BADCA0B221138EC300F37032 /* GameDetailsPresenterInterface.swift in Sources */,
 				BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */,
 				BAB70D5F2107E6650001A5DB /* TopGamesViewController.swift in Sources */,
+				BA00557221164A7D003B381B /* UIColor+Theme.swift in Sources */,
 				BAB70D642107ECD50001A5DB /* GameCollectionViewCell.swift in Sources */,
 				BA00557021162B19003B381B /* UIView+Animations.swift in Sources */,
 				BADCA0A22112950900F37032 /* FavoriteGamesInterface.swift in Sources */,

@@ -16,17 +16,11 @@ enum Result<T, E> where E: Error {
 }
 
 enum APIError: Error {
-    case requestFailed
-    case invalidData
-    case responseUnsuccessful
     case jsonParsingFailure
     case notConnected
     
     var localizedDescription: String {
         switch self {
-        case .requestFailed: return "Request Failed"
-        case .invalidData: return "Invalid Data"
-        case .responseUnsuccessful: return "Response Unsuccessful"
         case .jsonParsingFailure: return "JSON Parsing Failure"
         case .notConnected: return "Internet connection unavailable"
         }
@@ -57,6 +51,8 @@ class TwitchClient {
                 } catch {
                     completion(.failure(.jsonParsingFailure))
                 }
+            } else {
+                completion(.failure(.notConnected))
             }
         }
     }    

@@ -19,13 +19,14 @@ class EmptyStateView: UIView {
     private let titleLabel: UILabel = {
         let titleLabel = UILabel(frame: .zero)
         titleLabel.numberOfLines = 0
-        titleLabel.textColor = UIColor.gray
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = UIColor.white
         return titleLabel
     }()
     
     private let actionButton: UIButton = {
         let actionButton = UIButton(type: .custom)
-        actionButton.setTitleColor(UIColor.purple, for: .normal)
+        actionButton.setTitleColor(UIColor.twitchPurple, for: .normal)
         return actionButton
     }()
     

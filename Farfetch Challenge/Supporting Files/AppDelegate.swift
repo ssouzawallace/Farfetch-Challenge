@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupAppAppearance() {
         UITabBar.appearance().barStyle = .black
-        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().tintColor = UIColor.twitchPurple
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().isTranslucent = false
         

@@ -21,6 +21,7 @@ class GameDetailsViewController: UIViewController {
     let nameLabel: UILabel = {
         let nameLabel = UILabel(frame: .zero)
         nameLabel.textAlignment = .center
+        nameLabel.textColor = UIColor.white
         nameLabel.numberOfLines = 0
         nameLabel.font = UIFont.systemFont(ofSize: 30)
         return nameLabel
@@ -39,10 +40,10 @@ class GameDetailsViewController: UIViewController {
     }
     
     private func setupSubviews() {
+        view.backgroundColor = UIColor.backgroundColor
         favoriteBarButtonItem.target = self
         favoriteBarButtonItem.action = #selector(favoriteBarButtonTapped(_:))
         navigationItem.rightBarButtonItem = favoriteBarButtonItem
-        view.backgroundColor = UIColor.white
         view.addSubview(coverImageView)
         view.addSubview(nameLabel)
         constrainSubviews()

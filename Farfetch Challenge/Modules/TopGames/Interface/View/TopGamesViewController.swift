@@ -12,6 +12,13 @@ import Cartography
 
 class TopGamesViewController: UIViewController {
     
+    override var title: String? {
+        get {
+            return "Top Games"
+        }
+        set { /* do nothing */ }
+    }
+    
     var presenter: TopGamesPresenterInterface?
     
     let collectionView: UICollectionView = {
@@ -23,23 +30,22 @@ class TopGamesViewController: UIViewController {
     }()
     
     let activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
         activityIndicator.hidesWhenStopped = true
         return activityIndicator
     }()
     
-    let noInternetEmptyStateView = EmptyStateView(title: "You don't have\nFavorite Games", actionTitle: "Tentar novamente")
+    let noInternetEmptyStateView = EmptyStateView(title: "Request failed\nVerify you internet connection", actionTitle: "Try again")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Top Games"
         setupViews()
     
         presenter?.start()
     }
     
     private func setupViews() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.backgroundColor
         view.addSubview(collectionView)
         view.addSubview(activityIndicator)
         view.addSubview(noInternetEmptyStateView)

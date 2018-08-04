@@ -12,6 +12,13 @@ import Cartography
 
 class FavoriteGamesViewController: UIViewController {
     
+    override var title: String? {
+        get {
+            return "Favorites"
+        }
+        set { /* do nothing */ }
+    }
+    
     var presenter: FavoriteGamesPresenterInterface?
     
     let collectionView: UICollectionView = {
@@ -21,18 +28,17 @@ class FavoriteGamesViewController: UIViewController {
         collectionView.register(GameCollectionViewCell.self)
         return collectionView
     }()
-    
+
     let emptyStateView = EmptyStateView(title: "You don't have\nFavorite Games")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Favorites"
         setupViews()
         presenter?.viewDidLoad()
     }
     
     private func setupViews() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.backgroundColor
         view.addSubview(collectionView)
         view.addSubview(emptyStateView)
         constrainSubviews()
