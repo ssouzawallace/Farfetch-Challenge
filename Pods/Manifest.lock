@@ -4,20 +4,17 @@ PODS:
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
-  - Unbox (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Cartography (~> 3.0)
   - SDWebImage (~> 4.0)
-  - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Cartography: 231190d7d0b3107ce8d67c54189f059a509b3760
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
-  Unbox: 9ed33b2a31f7a8a049f54b94d40c4a52a28c4d9d
 
-PODFILE CHECKSUM: 0c1d1461daba1fca875980826547215ee8d270e3
+PODFILE CHECKSUM: feb8ccf7187b11837bab548142b508f2d0fdf71a
 
 COCOAPODS: 1.4.0

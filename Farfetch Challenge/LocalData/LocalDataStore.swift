@@ -82,7 +82,7 @@ class LocalDataStore {
             self.favoriteGames = favoriteGames
             retrieveImagesToCache(favoriteGames)
         } catch {
-            
+            print("ERRO: Falha ao recuperar lista de favoritos\n\(error)")
         }
     }
     

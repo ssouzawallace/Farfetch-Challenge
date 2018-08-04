@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import Unbox
 
 enum Result<T, E> where E: Error {
     case success(T)
@@ -43,10 +42,10 @@ class TwitchClient {
         if let cursor = cursor {
             parameters["after"] = cursor
         }
-        Alamofire.request(url, parameters: parameters, headers: headers).responseJSON { response in
-            if let json = response.result.value as? [String: Any] {
+        Alamofire.request(url, parameters: parameters, headers: headers).responseData { response in
+            if let jsonData = response.result.value {
                 do {
-                    let result: GameFeedResult = try unbox(dictionary: json)
+                    let result: GameFeedResult = try JSONDecoder().decode(GameFeedResult.self, from: jsonData)
                     completion(.success(result))
                 } catch {
                     completion(.failure(.jsonParsingFailure))

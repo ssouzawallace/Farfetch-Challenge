@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class GameViewModel {
     enum ImageType {
         case thumbnail

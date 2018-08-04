@@ -7,16 +7,25 @@
 //
 
 import Foundation
-import Unbox
 
-struct GameFeedResult {
+struct GameFeedResult: Codable {
+    enum GameFeedResultCodingKey: String, CodingKey {
+        case games = "data"
+        case pagination
+    }
+    
     let games: [GameModel]
     let pageCursor: String
-}
-
-extension GameFeedResult: Unboxable {
-    init(unboxer: Unboxer) throws {
-        self.games = try unboxer.unbox(key: "data")
-        self.pageCursor = try unboxer.unbox(keyPath: "pagination.cursor")
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: GameFeedResultCodingKey.self)
+        
+        games = try values.decode([GameModel].self, forKey: .games)
+        
+        if let cursor = try values.decode([String: String].self, forKey: .pagination)["cursor"] {
+            pageCursor = cursor
+        } else {
+            pageCursor = ""
+        }
     }
 }
