@@ -47,8 +47,9 @@ extension TopGamesInteractor: TopGamesInteractorInput {
                 }
                 
                 break
-            case .failure(let error):
+            case .failure(let error):                
                 if error == .notConnected {
+                    self?.currentPage = Page(state: .unloaded, cursor: nil)
                     self?.presenter?.noInternet()
                 }
                 print(error)
