@@ -63,10 +63,6 @@ extension FavoriteGamesViewController: FavoriteGamesViewInterface {
         emptyStateView.isHidden = true
     }
     
-    func reloadGames() {
-        collectionView.reloadData()
-    }
-    
     func reloadGamesWith(insertedIndices: [Int], deletedIndices: [Int], movedIndices: [(from: Int, to: Int)], willStartReloadCallback: () -> Void) {
         guard collectionView.delegate != nil else {
             return
