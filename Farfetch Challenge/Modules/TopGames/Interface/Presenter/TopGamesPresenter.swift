@@ -14,7 +14,7 @@ class TopGamesPresenter {
     var interactor: TopGamesInteractorInput?
     var router: TopGamesRouterInterface?
     
-    var favoriteGames: [GameModel] = []
+    var gamesList: [GameModel] = []
 }
 
 extension TopGamesPresenter: TopGamesPresenterInterface {
@@ -26,20 +26,20 @@ extension TopGamesPresenter: TopGamesPresenterInterface {
     }
     
     var numberOfGames: Int {
-        return favoriteGames.count
+        return gamesList.count
     }
     
     func configure(view: GameDisplayableView, at index: Int) {
-        let gameViewModel = GameViewModel(game: favoriteGames[index])
+        let gameViewModel = GameViewModel(game: gamesList[index])
         view.configureWith(game: gameViewModel)
     }
     
     func favoriteButtonTapped(at index: Int) {
-        interactor?.toggleFavorite(forGame: favoriteGames[index])
+        interactor?.toggleFavorite(forGame: gamesList[index])
     }
     
     func didSelectGame(at index: Int) {
-        router?.showDetails(ofGame: favoriteGames[index])
+        router?.showDetails(ofGame: gamesList[index])
     }
     
     func listIsReachingEnd() {
@@ -54,7 +54,7 @@ extension TopGamesPresenter: TopGamesPresenterInterface {
 extension TopGamesPresenter: TopGamesInteractorOutput {
     
     func fetched(gamesList: [GameModel]) {
-        favoriteGames = gamesList
+        self.gamesList = gamesList
         view?.hideLoader()
         view?.hideNoInternetMessage()
         view?.reloadGames()
