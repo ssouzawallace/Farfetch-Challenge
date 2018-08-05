@@ -46,9 +46,7 @@ extension FavoriteGamesPresenter: FavoriteGamesInteractorOutput {
         } else {
             view?.hideEmptyState()
         }
-        
         updateIndices(for: games)
-        
     }
     
     private func updateIndices(for gamesList: [GameModel]) {

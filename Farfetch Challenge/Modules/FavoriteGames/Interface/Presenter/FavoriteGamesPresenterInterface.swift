@@ -12,9 +12,7 @@ protocol FavoriteGamesPresenterInterface {
     var view: FavoriteGamesViewInterface? { get set }
     var interactor: FavoriteGamesInteractorInput? { get set }
     var router: FavoriteGamesRouterInterface? { get set }
-    
-    var favoriteGames: [GameModel] { get set }
-    
+        
     func viewDidLoad()
     
     var numberOfGames: Int { get }
