@@ -21,5 +21,4 @@ target 'Twitch Top 3' do
   pod 'SDWebImage', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
   pod 'Cartography', '~> 3.0'
-  pod 'PHDiff', '~> 1.1'
 end

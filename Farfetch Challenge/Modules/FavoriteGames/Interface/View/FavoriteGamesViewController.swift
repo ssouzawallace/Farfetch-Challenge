@@ -67,14 +67,12 @@ extension FavoriteGamesViewController: FavoriteGamesViewInterface {
         collectionView.reloadData()
     }
     
-    func reloadGamesWith(games: [GameModel], insertedIndices: [Int], deletedIndices: [Int], movedIndices: [(from: Int, to: Int)]) {
+    func reloadGamesWith(insertedIndices: [Int], deletedIndices: [Int], movedIndices: [(from: Int, to: Int)], willStartReloadCallback: () -> Void) {
         guard collectionView.delegate != nil else {
             return
         }
         collectionView.performBatchUpdates({
-            
-            self.presenter?.favoriteGames = games
-            
+            willStartReloadCallback()
             collectionView.deleteItems(at: deletedIndices.map{ return IndexPath(row: $0, section: 0)})
             collectionView.insertItems(at: insertedIndices.map{ return IndexPath(row: $0, section: 0)})
             for movedIndex in movedIndices {

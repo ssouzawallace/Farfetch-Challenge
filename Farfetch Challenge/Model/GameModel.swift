@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PHDiff
 
 public struct GameModel: Codable {
     enum GameCodingKey: String, CodingKey {
@@ -58,11 +57,5 @@ public struct GameModel: Codable {
 extension GameModel: Equatable {
     public static func == (lhs: GameModel, rhs: GameModel) -> Bool {
         return lhs.id == rhs.id
-    }
-}
-
-extension GameModel: Diffable {
-    public var diffIdentifier: String {
-        return id
     }
 }
