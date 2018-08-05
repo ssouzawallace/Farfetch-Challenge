@@ -35,6 +35,8 @@ class TopGamesViewController: UIViewController {
         return activityIndicator
     }()
     
+    let refreshControl = UIRefreshControl(frame: .zero)
+    
     let noInternetEmptyStateView = EmptyStateView(title: "Request failed\nVerify you internet connection", actionTitle: "Try again")
     
     override func viewDidLoad() {
@@ -49,10 +51,12 @@ class TopGamesViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(activityIndicator)
         view.addSubview(noInternetEmptyStateView)
+        collectionView.addSubview(refreshControl)
         constrainSubviews()
         collectionView.delegate = self
         collectionView.dataSource = self
         noInternetEmptyStateView.delegate = self
+        refreshControl.addTarget(self, action: #selector(refreshRequested), for: .valueChanged)
     }
     
     private func constrainSubviews() {
@@ -61,6 +65,10 @@ class TopGamesViewController: UIViewController {
             emptyState.edges == container.edges
             loader.center == container.center
         }
+    }
+    
+    @objc func refreshRequested() {
+        presenter?.start()
     }
 }
 
@@ -81,11 +89,14 @@ extension TopGamesViewController: TopGamesViewInterface {
     }
     
     func showLoader() {
-        activityIndicator.startAnimating()
+        if !refreshControl.isRefreshing {
+            activityIndicator.startAnimating()
+        }
     }
     
     func hideLoader() {
         activityIndicator.stopAnimating()
+        refreshControl.endRefreshing()
     }
     
     func reloadGames() {

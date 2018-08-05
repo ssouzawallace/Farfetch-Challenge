@@ -12,6 +12,7 @@ protocol TopGamesInteractorInput {
     var presenter: TopGamesInteractorOutput? { get set }
     
     func toggleFavorite(forGame game: GameModel)
+    func fetchFromBegining()
     func fetchNextPage()
 }
 

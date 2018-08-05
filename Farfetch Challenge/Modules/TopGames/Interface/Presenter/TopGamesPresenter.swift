@@ -22,7 +22,7 @@ extension TopGamesPresenter: TopGamesPresenterInterface {
     func start() {
         view?.showLoader()
         view?.hideNoInternetMessage()
-        askNewPageIfPossible()
+        interactor?.fetchFromBegining()
     }
     
     var numberOfGames: Int {
@@ -47,9 +47,6 @@ extension TopGamesPresenter: TopGamesPresenterInterface {
     }
     
     private func askNewPageIfPossible() {
-//        guard interactor?.currentPage.state != .loading else {
-//            return
-//        }
         interactor?.fetchNextPage()
     }
 }

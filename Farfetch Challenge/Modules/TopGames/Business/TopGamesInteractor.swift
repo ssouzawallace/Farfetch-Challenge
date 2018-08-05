@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct Page {
+    enum State {
+        case unloaded
+        case loading
+        case loaded
+    }
+    let state: State
+    let cursor: String?
+}
+
 class TopGamesInteractor {
     
     var presenter: TopGamesInteractorOutput?
@@ -19,19 +29,20 @@ class TopGamesInteractor {
     init() {
         LocalDataStore.shared.subscribe(self)
     }
-}
-
-struct Page {
-    enum State {
-        case unloaded
-        case loading
-        case loaded
+    
+    deinit {
+        LocalDataStore.shared.unsubscribe(self)
     }
-    let state: State
-    let cursor: String?
 }
 
 extension TopGamesInteractor: TopGamesInteractorInput {
+    
+    func fetchFromBegining() {
+        currentPage = Page(state: .unloaded, cursor: nil)
+        games = []
+        fetchNextPage()
+    }
+    
     func fetchNextPage() {
         guard currentPage.state != .loading else {
             return
