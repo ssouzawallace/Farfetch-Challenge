@@ -27,6 +27,7 @@ class TopGamesRouter: TopGamesRouterInterface {
         var presenter: TopGamesPresenterInterface & TopGamesInteractorOutput = TopGamesPresenter()
         var interactor: TopGamesInteractorInput = TopGamesInteractor()
         let router: TopGamesRouterInterface = TopGamesRouter(view: view as! UIViewController)
+        let apiDataManager: TopGamesAPIDataManagerInterface = TopGamesAPIDataManager()
         
         // Connecting
         view.presenter = presenter
@@ -34,6 +35,7 @@ class TopGamesRouter: TopGamesRouterInterface {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
+        interactor.apiDataManager = apiDataManager
         
         return view as! UIViewController
     }

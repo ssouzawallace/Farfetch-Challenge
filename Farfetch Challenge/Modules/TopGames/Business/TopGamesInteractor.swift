@@ -21,6 +21,7 @@ struct Page {
 class TopGamesInteractor {
     
     var presenter: TopGamesInteractorOutput?
+    var apiDataManager: TopGamesAPIDataManagerInterface?
     
     let twitchClient = TwitchClient()
     var currentPage: Page = Page(state: .unloaded, cursor: nil)
@@ -48,7 +49,7 @@ extension TopGamesInteractor: TopGamesInteractorInput {
             return
         }
         currentPage = Page(state: .loading, cursor: currentPage.cursor)
-        twitchClient.fetchPage(after: currentPage.cursor)  { [weak self] result in
+        apiDataManager?.fetchPage(after: currentPage.cursor) { [weak self] result in
             switch result {
             case .success(let gameFeedResult):
                 self?.games += gameFeedResult.games

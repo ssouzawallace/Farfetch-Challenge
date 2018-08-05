@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D9B7E96D312DD863A8481C6 /* Pods_Farfetch_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */; };
+		65B9CDA896FC4B0220EB85E0 /* Pods_Farfetch_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3587A8FF7CA2524068DD0357 /* Pods_Farfetch_ChallengeTests.framework */; };
 		A6505754F35F91EE369107D5 /* Pods_Twitch_Top_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */; };
 		BA00557021162B19003B381B /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00556F21162B19003B381B /* UIView+Animations.swift */; };
 		BA00557221164A7D003B381B /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00557121164A7D003B381B /* UIColor+Theme.swift */; };
@@ -15,6 +16,14 @@
 		BA00557421165D87003B381B /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB70D542107DFD60001A5DB /* GameModel.swift */; };
 		BA00557621165D87003B381B /* GameFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADEA5221094DA8008F37B7 /* GameFeedResult.swift */; };
 		BA00557721165D95003B381B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
+		BA56E31221173F530080CCB7 /* Farfetch_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E31121173F530080CCB7 /* Farfetch_ChallengeUITests.swift */; };
+		BA56E31921173F5B0080CCB7 /* GameDetailsInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E2FB21173BD40080CCB7 /* GameDetailsInteractorSpec.swift */; };
+		BA56E31B211746870080CCB7 /* TopGamesInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E31A211746870080CCB7 /* TopGamesInteractorSpec.swift */; };
+		BA56E31D21174CC80080CCB7 /* TopGamesAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E31C21174CC80080CCB7 /* TopGamesAPIDataManager.swift */; };
+		BA56E32021174CE00080CCB7 /* TopGamesAPIDataManagerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E31F21174CE00080CCB7 /* TopGamesAPIDataManagerInterface.swift */; };
+		BA56E323211750FE0080CCB7 /* FeedResultMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E322211750FE0080CCB7 /* FeedResultMock.swift */; };
+		BA56E3252117514E0080CCB7 /* FeedResult.json in Resources */ = {isa = PBXBuildFile; fileRef = BA56E3242117514E0080CCB7 /* FeedResult.json */; };
+		BA56E326211755E90080CCB7 /* FeedResult.json in Resources */ = {isa = PBXBuildFile; fileRef = BA56E3242117514E0080CCB7 /* FeedResult.json */; };
 		BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */; };
 		BA6D7AC7211019B90037CFA8 /* FavoriteGamesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */; };
 		BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */; };
@@ -58,6 +67,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BA56E30621173F4B0080CCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB70D202107C8340001A5DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAB70D272107C8340001A5DB;
+			remoteInfo = "Farfetch Challenge";
+		};
+		BA56E31421173F530080CCB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB70D202107C8340001A5DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAB70D272107C8340001A5DB;
+			remoteInfo = "Farfetch Challenge";
+		};
 		BAB70D4C2107C9E90001A5DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BAB70D202107C8340001A5DB /* Project object */;
@@ -84,10 +107,24 @@
 /* Begin PBXFileReference section */
 		12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch Top 3.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch Top 3/Pods-Twitch Top 3.release.xcconfig"; sourceTree = "<group>"; };
 		2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitch_Top_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3587A8FF7CA2524068DD0357 /* Pods_Farfetch_ChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farfetch_ChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0A24E2BBC560894A1378EC /* Pods-Farfetch ChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch ChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch ChallengeTests/Pods-Farfetch ChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A38060DB07FEB8C590FED85 /* Pods-Farfetch ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch ChallengeTests/Pods-Farfetch ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D36747FE3CD24DBB8FEA2C3 /* Pods-Farfetch Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farfetch Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		BA00556F21162B19003B381B /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		BA00557121164A7D003B381B /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		BA56E2FB21173BD40080CCB7 /* GameDetailsInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractorSpec.swift; sourceTree = "<group>"; };
+		BA56E30121173F4B0080CCB7 /* Farfetch ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Farfetch ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA56E30521173F4B0080CCB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA56E30F21173F530080CCB7 /* Farfetch ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Farfetch ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA56E31121173F530080CCB7 /* Farfetch_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farfetch_ChallengeUITests.swift; sourceTree = "<group>"; };
+		BA56E31321173F530080CCB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA56E31A211746870080CCB7 /* TopGamesInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesInteractorSpec.swift; sourceTree = "<group>"; };
+		BA56E31C21174CC80080CCB7 /* TopGamesAPIDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesAPIDataManager.swift; sourceTree = "<group>"; };
+		BA56E31F21174CE00080CCB7 /* TopGamesAPIDataManagerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesAPIDataManagerInterface.swift; sourceTree = "<group>"; };
+		BA56E322211750FE0080CCB7 /* FeedResultMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResultMock.swift; sourceTree = "<group>"; };
+		BA56E3242117514E0080CCB7 /* FeedResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FeedResult.json; sourceTree = "<group>"; };
 		BA6D7AC1210FC7AE0037CFA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA6D7AC6211019B90037CFA8 /* FavoriteGamesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGamesStore.swift; sourceTree = "<group>"; };
 		BA6D7AD421102E870037CFA8 /* TopGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesPresenter.swift; sourceTree = "<group>"; };
@@ -136,6 +173,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA56E2FE21173F4B0080CCB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65B9CDA896FC4B0220EB85E0 /* Pods_Farfetch_ChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA56E30C21173F530080CCB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAB70D252107C8340001A5DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +215,8 @@
 				A61BBAF8AC8AD53E461D0D3C /* Pods-Farfetch Challenge.release.xcconfig */,
 				BDDDFB010C77E6C7409BA3E4 /* Pods-Twitch Top 3.debug.xcconfig */,
 				12A0A2FF893170EBB105BEEC /* Pods-Twitch Top 3.release.xcconfig */,
+				4A0A24E2BBC560894A1378EC /* Pods-Farfetch ChallengeTests.debug.xcconfig */,
+				8A38060DB07FEB8C590FED85 /* Pods-Farfetch ChallengeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -200,6 +254,44 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		BA56E30221173F4B0080CCB7 /* Farfetch ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA56E321211750F40080CCB7 /* Mock */,
+				BA56E31A211746870080CCB7 /* TopGamesInteractorSpec.swift */,
+				BA56E2FB21173BD40080CCB7 /* GameDetailsInteractorSpec.swift */,
+				BA56E30521173F4B0080CCB7 /* Info.plist */,
+			);
+			path = "Farfetch ChallengeTests";
+			sourceTree = "<group>";
+		};
+		BA56E31021173F530080CCB7 /* Farfetch ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA56E31121173F530080CCB7 /* Farfetch_ChallengeUITests.swift */,
+				BA56E31321173F530080CCB7 /* Info.plist */,
+			);
+			path = "Farfetch ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		BA56E31E21174CCC0080CCB7 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				BA56E31C21174CC80080CCB7 /* TopGamesAPIDataManager.swift */,
+				BA56E31F21174CE00080CCB7 /* TopGamesAPIDataManagerInterface.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		BA56E321211750F40080CCB7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BA56E322211750FE0080CCB7 /* FeedResultMock.swift */,
+				BA56E3242117514E0080CCB7 /* FeedResult.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		BA6D7AC0210FC6380037CFA8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +306,8 @@
 			children = (
 				BAB70D2A2107C8340001A5DB /* Farfetch Challenge */,
 				BAB70D452107C9E90001A5DB /* Twitch Top 3 */,
+				BA56E30221173F4B0080CCB7 /* Farfetch ChallengeTests */,
+				BA56E31021173F530080CCB7 /* Farfetch ChallengeUITests */,
 				BAB70D422107C9E90001A5DB /* Frameworks */,
 				BAB70D292107C8340001A5DB /* Products */,
 				40D58452D2A22E33378EBAC1 /* Pods */,
@@ -225,6 +319,8 @@
 			children = (
 				BAB70D282107C8340001A5DB /* Farfetch Challenge.app */,
 				BAB70D412107C9E80001A5DB /* Twitch Top 3.appex */,
+				BA56E30121173F4B0080CCB7 /* Farfetch ChallengeTests.xctest */,
+				BA56E30F21173F530080CCB7 /* Farfetch ChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +346,7 @@
 				BAB70D432107C9E90001A5DB /* NotificationCenter.framework */,
 				E37A71073261B4A4A66FFC67 /* Pods_Farfetch_Challenge.framework */,
 				2CF8C0A5C32EAC439862BFDD /* Pods_Twitch_Top_3.framework */,
+				3587A8FF7CA2524068DD0357 /* Pods_Farfetch_ChallengeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,6 +467,7 @@
 		BABDEDF221126B590071E9F6 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				BA56E31E21174CCC0080CCB7 /* DataManager */,
 				BAA07DFE2110BDBC00BF5977 /* TopGamesInteractor.swift */,
 				BABDEDF721126C160071E9F6 /* TopGamesInteractorIO.swift */,
 			);
@@ -505,6 +603,45 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BA56E30021173F4B0080CCB7 /* Farfetch ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA56E30821173F4B0080CCB7 /* Build configuration list for PBXNativeTarget "Farfetch ChallengeTests" */;
+			buildPhases = (
+				99EB26544177C83CE372DDFE /* [CP] Check Pods Manifest.lock */,
+				BA56E2FD21173F4B0080CCB7 /* Sources */,
+				BA56E2FE21173F4B0080CCB7 /* Frameworks */,
+				BA56E2FF21173F4B0080CCB7 /* Resources */,
+				2799688FFCA8DF163C55A222 /* [CP] Embed Pods Frameworks */,
+				D491F3CE621CB283A13A0404 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA56E30721173F4B0080CCB7 /* PBXTargetDependency */,
+			);
+			name = "Farfetch ChallengeTests";
+			productName = "Farfetch ChallengeTests";
+			productReference = BA56E30121173F4B0080CCB7 /* Farfetch ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA56E30E21173F530080CCB7 /* Farfetch ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA56E31621173F530080CCB7 /* Build configuration list for PBXNativeTarget "Farfetch ChallengeUITests" */;
+			buildPhases = (
+				BA56E30B21173F530080CCB7 /* Sources */,
+				BA56E30C21173F530080CCB7 /* Frameworks */,
+				BA56E30D21173F530080CCB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA56E31521173F530080CCB7 /* PBXTargetDependency */,
+			);
+			name = "Farfetch ChallengeUITests";
+			productName = "Farfetch ChallengeUITests";
+			productReference = BA56E30F21173F530080CCB7 /* Farfetch ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BAB70D272107C8340001A5DB /* Farfetch Challenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB70D3A2107C8360001A5DB /* Build configuration list for PBXNativeTarget "Farfetch Challenge" */;
@@ -556,6 +693,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = WallaCorp;
 				TargetAttributes = {
+					BA56E30021173F4B0080CCB7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BAB70D272107C8340001A5DB;
+					};
+					BA56E30E21173F530080CCB7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BAB70D272107C8340001A5DB;
+					};
 					BAB70D272107C8340001A5DB = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -579,16 +724,34 @@
 			targets = (
 				BAB70D272107C8340001A5DB /* Farfetch Challenge */,
 				BAB70D402107C9E80001A5DB /* Twitch Top 3 */,
+				BA56E30021173F4B0080CCB7 /* Farfetch ChallengeTests */,
+				BA56E30E21173F530080CCB7 /* Farfetch ChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA56E2FF21173F4B0080CCB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA56E3252117514E0080CCB7 /* FeedResult.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA56E30D21173F530080CCB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAB70D262107C8340001A5DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BAB70D362107C8360001A5DB /* LaunchScreen.storyboard in Resources */,
+				BA56E326211755E90080CCB7 /* FeedResult.json in Resources */,
 				BAB70D332107C8360001A5DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +783,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2799688FFCA8DF163C55A222 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch ChallengeTests/Pods-Farfetch ChallengeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch ChallengeTests/Pods-Farfetch ChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BAA897B983A46080AA2D20C /* [CP] Check Pods Manifest.lock */ = {
@@ -677,6 +860,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		99EB26544177C83CE372DDFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Farfetch ChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ADD0E73114567EF534A92992 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -692,9 +893,42 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch Challenge/Pods-Farfetch Challenge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D491F3CE621CB283A13A0404 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farfetch ChallengeTests/Pods-Farfetch ChallengeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA56E2FD21173F4B0080CCB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA56E31921173F5B0080CCB7 /* GameDetailsInteractorSpec.swift in Sources */,
+				BA56E31B211746870080CCB7 /* TopGamesInteractorSpec.swift in Sources */,
+				BA56E323211750FE0080CCB7 /* FeedResultMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA56E30B21173F530080CCB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA56E31221173F530080CCB7 /* Farfetch_ChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAB70D242107C8340001A5DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -703,6 +937,7 @@
 				BAADEA55210953FF008F37B7 /* GameViewModel.swift in Sources */,
 				BAF991002110E76F001FF51D /* GameDetailsInteractor.swift in Sources */,
 				BADCA0B42114BFE600F37032 /* LocalDataStore.swift in Sources */,
+				BA56E31D21174CC80080CCB7 /* TopGamesAPIDataManager.swift in Sources */,
 				BAB70D692107FD250001A5DB /* ColumnsFlowLayout.swift in Sources */,
 				BAF9910921110215001FF51D /* TopGamesRouter.swift in Sources */,
 				BA6D7AD521102E870037CFA8 /* TopGamesPresenter.swift in Sources */,
@@ -716,6 +951,7 @@
 				BAADEA5321094DA8008F37B7 /* GameFeedResult.swift in Sources */,
 				BADCA0AE21138DA200F37032 /* GameDetailsInteractorIO.swift in Sources */,
 				BADCA0B821161B3700F37032 /* EmptyStateView.swift in Sources */,
+				BA56E32021174CE00080CCB7 /* TopGamesAPIDataManagerInterface.swift in Sources */,
 				BAB70D592107E31E0001A5DB /* GameDetailsViewController.swift in Sources */,
 				BADCA0B221138EC300F37032 /* GameDetailsPresenterInterface.swift in Sources */,
 				BA6D7AC2210FC7AE0037CFA8 /* Constants.swift in Sources */,
@@ -753,6 +989,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BA56E30721173F4B0080CCB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAB70D272107C8340001A5DB /* Farfetch Challenge */;
+			targetProxy = BA56E30621173F4B0080CCB7 /* PBXContainerItemProxy */;
+		};
+		BA56E31521173F530080CCB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAB70D272107C8340001A5DB /* Farfetch Challenge */;
+			targetProxy = BA56E31421173F530080CCB7 /* PBXContainerItemProxy */;
+		};
 		BAB70D4D2107C9E90001A5DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAB70D402107C9E80001A5DB /* Twitch Top 3 */;
@@ -780,6 +1026,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BA56E30921173F4B0080CCB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A0A24E2BBC560894A1378EC /* Pods-Farfetch ChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				INFOPLIST_FILE = "Farfetch ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Farfetch Challenge.app/Farfetch Challenge";
+			};
+			name = Debug;
+		};
+		BA56E30A21173F4B0080CCB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A38060DB07FEB8C590FED85 /* Pods-Farfetch ChallengeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				INFOPLIST_FILE = "Farfetch ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Farfetch Challenge.app/Farfetch Challenge";
+			};
+			name = Release;
+		};
+		BA56E31721173F530080CCB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				INFOPLIST_FILE = "Farfetch ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Farfetch Challenge";
+			};
+			name = Debug;
+		};
+		BA56E31821173F530080CCB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HA4TQN2ZB;
+				INFOPLIST_FILE = "Farfetch ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.Farfetch-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Farfetch Challenge";
+			};
+			name = Release;
+		};
 		BAB70D382107C8360001A5DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -903,7 +1229,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Farfetch Challenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -920,7 +1249,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Farfetch Challenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wallacorp.FarfetchChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -935,7 +1267,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Twitch Top 3/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -951,7 +1287,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				INFOPLIST_FILE = "$(SRCROOT)/Twitch Top 3/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.wallacorp.FarfetchChallenge.Twitch-Top-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -963,6 +1303,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA56E30821173F4B0080CCB7 /* Build configuration list for PBXNativeTarget "Farfetch ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA56E30921173F4B0080CCB7 /* Debug */,
+				BA56E30A21173F4B0080CCB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA56E31621173F530080CCB7 /* Build configuration list for PBXNativeTarget "Farfetch ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA56E31721173F530080CCB7 /* Debug */,
+				BA56E31821173F530080CCB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BAB70D232107C8340001A5DB /* Build configuration list for PBXProject "Farfetch Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

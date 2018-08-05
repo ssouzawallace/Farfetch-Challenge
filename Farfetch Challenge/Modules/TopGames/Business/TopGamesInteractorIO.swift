@@ -10,6 +10,7 @@ import Foundation
 
 protocol TopGamesInteractorInput {
     var presenter: TopGamesInteractorOutput? { get set }
+    var apiDataManager: TopGamesAPIDataManagerInterface? { get set }
     
     func toggleFavorite(forGame game: GameModel)
     func fetchFromBegining()

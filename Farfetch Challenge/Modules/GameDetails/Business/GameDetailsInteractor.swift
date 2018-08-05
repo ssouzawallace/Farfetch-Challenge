@@ -13,7 +13,7 @@ class GameDetailsInteractor {
     
     private let game: GameModel
     
-    init(withGame game: GameModel) {
+    required init(withGame game: GameModel) {
         self.game = game
         LocalDataStore.shared.subscribe(self)
     }
@@ -24,6 +24,7 @@ class GameDetailsInteractor {
 }
 
 extension GameDetailsInteractor: GameDetailsInteractorInput {
+
     func getGame() -> GameModel {
         return game
     }

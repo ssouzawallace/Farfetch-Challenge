@@ -22,3 +22,11 @@ target 'Twitch Top 3' do
   pod 'Cartography', '~> 3.0'
   
 end
+
+
+target 'Farfetch ChallengeTests' do
+    use_frameworks!
+    # Pods for testing
+    pod 'Quick', '~> 1.3.0'
+    pod 'Nimble', '~> 7.1.2'
+end

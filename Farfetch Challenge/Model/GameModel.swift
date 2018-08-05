@@ -29,6 +29,12 @@ public struct GameModel: Codable {
                              height: Constants.fullImageHeight)
     }
     
+    public init(id: String, name: String, boxArtUrlTemplate: String) {
+        self.id = id
+        self.name = name
+        self.boxArtUrlTemplate = boxArtUrlTemplate
+    }
+    
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: GameCodingKey.self)
         

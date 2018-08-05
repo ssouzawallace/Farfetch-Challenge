@@ -11,8 +11,8 @@ import Foundation
 protocol GameDetailsInteractorInput {
     var presenter: GameDetailsInteractorOutput? { get set }
     
+    init(withGame game: GameModel)
     func getGame() -> GameModel
-    
     func toggleFavoriteStatus()
 }
 
