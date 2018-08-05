@@ -8,7 +8,7 @@ target 'Farfetch Challenge' do
   # Pods for Farfetch Challenge
   pod 'SDWebImage', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
-  pod 'Unbox'
+  pod 'Cartography', '~> 3.0'
 
 end
 
@@ -17,5 +17,15 @@ target 'Twitch Top 3' do
   use_frameworks!
 
   # Pods for Twitch Top 3
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  
+end
 
+
+target 'Farfetch ChallengeTests' do
+    use_frameworks!
+    # Pods for testing
+    pod 'Quick', '~> 1.3.0'
+    pod 'Nimble', '~> 7.1.2'
 end

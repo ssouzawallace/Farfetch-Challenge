@@ -1,0 +1,21 @@
+//
+//  FavoriteGamesInteractorIO.swift
+//  Farfetch Challenge
+//
+//  Created by Wallace Souza Silva on 02/08/18.
+//  Copyright © 2018 WallaCorp. All rights reserved.
+//
+
+import Foundation
+
+protocol FavoriteGamesInteractorInput {
+    var presenter: FavoriteGamesInteractorOutput? { get set }
+    var localDataManager: FavoriteGamesLocalDataManagerInterface? { get set }
+    
+    func fetchFavorites()
+    func toggleFavorite(forGame game: GameModel)
+}
+
+protocol FavoriteGamesInteractorOutput {
+    func favoriteGamesChanged(_ games: [GameModel])
+}
