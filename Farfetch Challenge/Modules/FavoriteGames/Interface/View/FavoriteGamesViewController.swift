@@ -67,10 +67,20 @@ extension FavoriteGamesViewController: FavoriteGamesViewInterface {
         collectionView.reloadData()
     }
     
-    func updateIndices(toInsertIndexes: [Int], toDeleteIndexes: [Int]) {
+    func reloadGamesWith(games: [GameModel], insertedIndices: [Int], deletedIndices: [Int], movedIndices: [(from: Int, to: Int)]) {
+        guard collectionView.delegate != nil else {
+            return
+        }
         collectionView.performBatchUpdates({
-            collectionView.deleteItems(at: toDeleteIndexes.map{ return IndexPath(row: $0, section: 0)})
-            collectionView.insertItems(at: toInsertIndexes.map{ return IndexPath(row: $0, section: 0)})
+            
+            self.presenter?.favoriteGames = games
+            
+            collectionView.deleteItems(at: deletedIndices.map{ return IndexPath(row: $0, section: 0)})
+            collectionView.insertItems(at: insertedIndices.map{ return IndexPath(row: $0, section: 0)})
+            for movedIndex in movedIndices {
+                collectionView.moveItem(at: IndexPath(item: movedIndex.from, section: 0),
+                                        to: IndexPath(item: movedIndex.to, section: 0))
+            }
         }, completion: nil)
     }
 }
@@ -84,7 +94,8 @@ extension FavoriteGamesViewController: UICollectionViewDataSource {
         let cell = collectionView.deque(GameCollectionViewCell.self, forIndexPath: indexPath)
         presenter?.configure(view: cell, at: indexPath.row)
         cell.callback = {
-            self.presenter?.favoriteButtonTapped(at: indexPath.row)
+            guard let indexOfCell = collectionView.indexPath(for: cell) else { return }
+            self.presenter?.favoriteButtonTapped(at: indexOfCell.row)
         }
         cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255.0,
                                        green: CGFloat(arc4random_uniform(255))/255.0,

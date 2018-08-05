@@ -102,7 +102,8 @@ extension TopGamesViewController: UICollectionViewDataSource {
         let cell = collectionView.deque(GameCollectionViewCell.self, forIndexPath: indexPath)
         presenter?.configure(view: cell, at: indexPath.row)
         cell.callback = {
-            self.presenter?.favoriteButtonTapped(at: indexPath.row)
+            guard let indexOfCell = collectionView.indexPath(for: cell) else { return }
+            self.presenter?.favoriteButtonTapped(at: indexOfCell.row)
         }
         cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255))/255.0,
                                        green: CGFloat(arc4random_uniform(255))/255.0,

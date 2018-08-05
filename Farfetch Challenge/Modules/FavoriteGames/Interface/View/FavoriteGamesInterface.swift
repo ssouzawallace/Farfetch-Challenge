@@ -15,6 +15,7 @@ protocol FavoriteGamesViewInterface {
     func showEmptyState()
     func hideEmptyState()
     
-    func updateIndices(toInsertIndexes: [Int], toDeleteIndexes: [Int])
+    func reloadGamesWith(games: [GameModel], insertedIndices: [Int], deletedIndices: [Int], movedIndices: [(from: Int, to: Int)])
+    
     func reloadGames()
 }
