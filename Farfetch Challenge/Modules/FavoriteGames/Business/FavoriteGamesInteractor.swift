@@ -10,33 +10,25 @@ import Foundation
 
 class FavoriteGamesInteractor {
     var presenter: FavoriteGamesInteractorOutput?
+    var localDataManager: FavoriteGamesLocalDataManagerInterface? {
+        didSet {
+            localDataManager?.favoriteGamesChangedCallback = favoriteGamesChanged
+        }
+    }    
     
-    init() {
-        LocalDataStore.shared.subscribe(self)
-    }
-    
-    deinit {
-        LocalDataStore.shared.unsubscribe(self)
+    func favoriteGamesChanged() {
+        presenter?.favoriteGamesChanged(localDataManager?.getFavoriteGames() ?? [])
     }
 }
 
 extension FavoriteGamesInteractor: FavoriteGamesInteractorInput {
+    
     func fetchFavorites() {
-        presenter?.favoriteGamesChanged(LocalDataStore.shared.getFavoriteGames())
+        presenter?.favoriteGamesChanged(localDataManager?.getFavoriteGames() ?? [])
     }
     
     func toggleFavorite(forGame game: GameModel) {
-        if LocalDataStore.shared.isFavorite(game: game) {
-            LocalDataStore.shared.removeFavorite(game: game)
-        } else {
-            LocalDataStore.shared.addFavorite(game: game)
-        }
+        localDataManager?.toggleFavorite(game)
     }
 }
 
-extension FavoriteGamesInteractor: FavoriteGamesStoreSubscriber {
-    func favoriteGamesChanged() {
-        presenter?.favoriteGamesChanged(LocalDataStore.shared.getFavoriteGames())
-        // TODO
-    }
-}

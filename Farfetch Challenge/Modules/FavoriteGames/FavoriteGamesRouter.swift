@@ -26,6 +26,7 @@ class FavoriteGamesRouter {
         var view: FavoriteGamesViewInterface = FavoriteGamesViewController()
         var presenter: FavoriteGamesPresenterInterface & FavoriteGamesInteractorOutput = FavoriteGamesPresenter()
         var interactor: FavoriteGamesInteractorInput = FavoriteGamesInteractor()
+        let localDataManager: FavoriteGamesLocalDataManagerInterface = FavoriteGamesLocalDataManager()
         let router: FavoriteGamesRouterInterface = FavoriteGamesRouter(view: view as! UIViewController)
         
         // Connecting
@@ -34,6 +35,7 @@ class FavoriteGamesRouter {
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
+        interactor.localDataManager = localDataManager
         
         return view as! UIViewController
     }

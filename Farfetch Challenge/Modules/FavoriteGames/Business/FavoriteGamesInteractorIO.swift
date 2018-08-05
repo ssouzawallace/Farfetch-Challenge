@@ -10,6 +10,7 @@ import Foundation
 
 protocol FavoriteGamesInteractorInput {
     var presenter: FavoriteGamesInteractorOutput? { get set }
+    var localDataManager: FavoriteGamesLocalDataManagerInterface? { get set }
     
     func fetchFavorites()
     func toggleFavorite(forGame game: GameModel)
