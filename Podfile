@@ -19,7 +19,6 @@ target 'Twitch Top 3' do
   # Pods for Twitch Top 3
   pod 'SDWebImage', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
-  pod 'Cartography', '~> 3.0'
   
 end
 
